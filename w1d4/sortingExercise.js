@@ -15,3 +15,20 @@ var students = [
 ];
 
 
+students.sort (function (a, b){
+  var nameA = a.name.toUpperCase();
+  var nameB = b.name.toUpperCase();
+
+  if (nameA < nameB){
+    return -1;
+  } else if (nameA > nameB){
+    return 1;
+  } else if(nameA == nameB){
+    return a.age - b.age
+  }
+
+})
+
+console.log(students);
+
+
