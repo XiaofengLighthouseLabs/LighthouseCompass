@@ -1,16 +1,9 @@
 // https module be required
 var https = require ('https');
 
-function getAndPrintHTMLChunks() {
+function getAndPrintHTML(options) {
 
-  var requestOptions = {
-    // domain name
-    host: 'sytantris.github.io',
-    // resource
-    path: '/http-examples/step2.html'
-  };
-
-  https.get(requestOptions, function(response){
+  https.get(options, function(response){
     // set encoding of received data to UTF-8
     response.setEncoding('utf8');
     // create a buffer
@@ -33,4 +26,16 @@ function getAndPrintHTMLChunks() {
   });
 }
 
-getAndPrintHTMLChunks()
+
+
+
+  var requestOptions = {
+    // domain name
+    host: 'sytantris.github.io',
+    // resource
+    path: '/http-examples/step3.html'
+  };
+
+getAndPrintHTML(requestOptions);
+
+
